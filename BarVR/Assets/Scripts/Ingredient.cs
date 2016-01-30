@@ -19,14 +19,19 @@ public class Ingredient : Selectable {
             return false;
         }
 
-        string otherName = StripString(c.gameObject.name);
-        string myName = StripString(gameObject.name);
+        string otherName = c.ToString();
+        string myName = ToString();
         return myName == otherName;
     }
 
     public override void Select()
     {
         PlayerHand.Instance.Grab(this);
+    }
+
+    public override string ToString()
+    {
+        return StripString(gameObject.name);
     }
 
     protected string StripString(string s)

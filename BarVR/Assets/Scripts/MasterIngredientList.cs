@@ -86,5 +86,5 @@ public class Combination
 [Serializable]
 public enum PrepMethod
 {
-    Boil, Chop, Fry
+    Boil, Chop , Fry
 };
