@@ -14,26 +14,30 @@ public class PreparationStation : Selectable
 
     public Transform ingredientSpot;
 
+    public UITimer timer;
+
+    protected void Start()
+    {
+        timer.done = FinishPrep;
+    }
+
     public override void Select()
     {
-        Debug.Log("Selected prep station"+(curIngredient==null));
         if (curIngredient == null)
         {
             curIngredient = PlayerHand.Instance.Release();
             if (curIngredient != null)
             {
                 PlayerHand.Instance.MoveTo(curIngredient, ingredientSpot);
-                StartCoroutine(Prep());
+                timer.StartTimer();
             }
         }
     }
 
     public float prepTime = 2f;
 
-    public IEnumerator Prep()
+    public void FinishPrep()
     {
-        yield return new WaitForSeconds(prepTime);
-
         Debug.Log("Done prepping!");
         product = MasterIngredientList.Instance.CombineIngredients(curIngredient, method);
         product = (Ingredient)GameObject.Instantiate(product, ingredientSpot.position, Quaternion.identity);
