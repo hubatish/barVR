@@ -32,7 +32,7 @@ public class MasterIngredientList : MonoBehaviour
     /// <returns></returns>
     public Ingredient CombineIngredients(List<Ingredient> foods, PrepMethod method)
     {
-        Combination combo = combinations.FirstOrDefault(c => c == (new Combination(foods, method)));
+        Combination combo = combinations.FirstOrDefault(c => c.Equals(new Combination(foods, method)));
         if(combo == null)
         {
             return failure;
@@ -58,9 +58,15 @@ public class Combination
             return false;
         }
 
-        // If parameter cannot be cast to Point return false.
+        // If parameter cannot be cast return false.
         Combination c = obj as Combination;
         if ((System.Object)c == null)
+        {
+            return false;
+        }
+
+        //Do combination specific compares
+        if (c.method != method)
         {
             return false;
         }

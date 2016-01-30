@@ -16,6 +16,7 @@ public class PreparationStation : Selectable
 
     public override void Select()
     {
+        Debug.Log("Selected prep station"+(curIngredient==null));
         if (curIngredient == null)
         {
             curIngredient = PlayerHand.Instance.Release();
