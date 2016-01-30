@@ -17,4 +17,18 @@ public class Goal : MonoBehaviour {
 	void Start () {
         recipe.SetCombination();
 	}
+
+    public void TryCombo(Ingredient final)
+    {
+        if (recipe.combination.product.Equals(final))
+        {
+            Debug.Log("WINning!");
+            recipe.SetCombination();
+        }
+        else
+        {
+            Debug.Log("utter failure!");
+        }
+    }
+
 }

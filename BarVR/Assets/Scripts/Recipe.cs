@@ -9,7 +9,7 @@ public class Recipe : MonoBehaviour {
 
     public Text text;
 
-    private Combination combination;
+    public Combination combination;
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +34,7 @@ public class Recipe : MonoBehaviour {
     protected Combination GetRandomCombination()
     {
         var combos = MasterIngredientList.Instance.combinations;
-        var r = UnityEngine.Random.Range(0, combos.Count - 1);
+        var r = UnityEngine.Random.Range(0, combos.Count);
         return combos[r];
     }
 }

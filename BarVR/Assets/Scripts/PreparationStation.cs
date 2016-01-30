@@ -5,15 +5,11 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public class PreparationStation : Selectable
+public class PreparationStation : BaseStation
 {
-    public Ingredient curIngredient;
     public Ingredient product;
 
     public PrepMethod method;
-
-    public Transform ingredientSpot;
-
     public UITimer timer;
 
     protected void Start()
@@ -21,17 +17,10 @@ public class PreparationStation : Selectable
         timer.done = FinishPrep;
     }
 
-    public override void Select()
+    public override void UseIngredients()
     {
-        if (curIngredient == null)
-        {
-            curIngredient = PlayerHand.Instance.Release();
-            if (curIngredient != null)
-            {
-                PlayerHand.Instance.MoveTo(curIngredient, ingredientSpot);
-                timer.StartTimer();
-            }
-        }
+        //They clicked while have ingredients in Station
+        timer.StartTimer();
     }
 
     public float prepTime = 2f;
@@ -39,11 +28,9 @@ public class PreparationStation : Selectable
     public void FinishPrep()
     {
         Debug.Log("Done prepping!");
-        product = MasterIngredientList.Instance.CombineIngredients(curIngredient, method);
-        product = (Ingredient)GameObject.Instantiate(product, ingredientSpot.position, Quaternion.identity);
+        product = MasterIngredientList.Instance.CombineIngredients(curIngredients, method);
+        product = (Ingredient)GameObject.Instantiate(product, ingredientSpots[0].position, Quaternion.identity);
 
-        //Destroy ingredients
-        GameObject.Destroy(curIngredient.gameObject);
-        curIngredient = null;
+        ClearIngredients();
     }
 }
