@@ -30,7 +30,7 @@ GameObject:
   - 114: {fileID: 11432306}
   - 114: {fileID: 11498920}
   - 114: {fileID: 11434700}
-  - 54: {fileID: 5482852}
+  - 54: {fileID: 5442240}
   - 114: {fileID: 11496168}
   - 65: {fileID: 6586304}
   m_Layer: 0
@@ -98,7 +98,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153432}
   m_Mesh: {fileID: 4300000, guid: e19ae4c4f15fe6c4683200f37bf1f314, type: 3}
---- !u!54 &5482852
+--- !u!54 &5442240
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -169,8 +169,8 @@ MonoBehaviour:
       InstanceTarget: {fileID: 11498920}
     - LIIF: 430875890
       InstanceTarget: {fileID: 11434700}
-    - LIIF: -1546848984
-      InstanceTarget: {fileID: 5482852}
+    - LIIF: 1718390823
+      InstanceTarget: {fileID: 5442240}
     - LIIF: 1372285140
       InstanceTarget: {fileID: 6586304}
     - LIIF: 452280378
@@ -207,8 +207,6 @@ MonoBehaviour:
     NonPrefabComponents:
     - child: {fileID: 6586304}
       parent: {fileID: 158008}
-    - child: {fileID: 5482852}
-      parent: {fileID: 158008}
     - child: {fileID: 11496168}
       parent: {fileID: 158008}
     RemovedObjects: 174495b1
@@ -227,6 +225,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11498920}
+  shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+  doOnce: 1
 --- !u!114 &11455320
 MonoBehaviour:
   m_ObjectHideFlags: 33
