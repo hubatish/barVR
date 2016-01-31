@@ -58,7 +58,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.43, y: 0, z: -0.45}
+=======
+  m_LocalPosition: {x: -0.75, y: 0, z: 0}
+>>>>>>> 47987068872ab2428056a03fbf66cd9ed5e8978a
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407424}
@@ -141,6 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11456444}
+  shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+  doOnce: 1
 --- !u!114 &11456444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,6 +210,10 @@ MonoBehaviour:
     - Object: {fileID: 157420}
       ObjeckLink: 1898382997
       PropertyPath: m_Name
+      Mode: 0
+    - Object: {fileID: 460116}
+      ObjeckLink: -1364344834
+      PropertyPath: m_LocalPosition
       Mode: 0
     - Object: {fileID: 460116}
       ObjeckLink: -1364344834

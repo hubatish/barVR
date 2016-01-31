@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11484418}
+  shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+  doOnce: 1
 --- !u!114 &11445532
 MonoBehaviour:
   m_ObjectHideFlags: 33
@@ -209,6 +211,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814d6c80143cfa144abc4478fb7a4827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  formingCombination:
+    ingredients: []
+    method: 0
+    product: {fileID: 0}
 --- !u!135 &13587814
 SphereCollider:
   m_ObjectHideFlags: 1

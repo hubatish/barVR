@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class PreparationStation : BaseStation
 {
+    //Animator anim;
+    // int boilhash = Animator.StringToHash("shake");
+    public GameObject boiling;
     public Ingredient product;
 
     public PrepMethod method;
@@ -14,12 +17,16 @@ public class PreparationStation : BaseStation
 
     protected void Start()
     {
+        // anim = GetComponent<Animator>();
+        boiling = GameObject.Find("HolyFireStrike");
+        boiling.SetActive(false);
         timer.done = FinishPrep;
     }
 
     public override void UseIngredients()
     {
         //They clicked while have ingredients in Station
+        boiling.SetActive(true);
         timer.StartTimer();
     }
 
@@ -28,9 +35,12 @@ public class PreparationStation : BaseStation
     public void FinishPrep()
     {
         Debug.Log("Done prepping!");
+        // anim.SetTrigger(boilhash);
+
         product = MasterIngredientList.Instance.CombineIngredients(curIngredients, method);
-        product = (Ingredient)GameObject.Instantiate(product, ingredientSpots[0].position, Quaternion.identity);
+        product.transform.position = ingredientSpots[0].position;
 
         ClearIngredients();
+        boiling.SetActive(false);
     }
 }

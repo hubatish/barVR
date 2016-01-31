@@ -19,6 +19,19 @@ public class BaseStation : Selectable
         }
         PlayerHand.Instance.MoveTo(ingredient, ingredientSpots[curIngredients.Count]);
         curIngredients.Add(ingredient);
+        ingredient.onSelect += delegate ()
+        {
+            RemoveIngredient(ingredient);
+        };
+    }
+
+    public void RemoveIngredient(Ingredient ingredient)
+    {
+        if (curIngredients.Contains(ingredient))
+        {
+            curIngredients.Remove(ingredient);
+            ingredient.onSelect = delegate () { };
+        }
     }
 
     public override void Select()
@@ -44,7 +57,8 @@ public class BaseStation : Selectable
         //Destroy ingredients
         for (int i = curIngredients.Count - 1; i >= 0; i--)
         {
-            GameObject.Destroy(curIngredients[i].gameObject);
+            curIngredients[i].ClearAll();
+            //GameObject.Destroy(curIngredients[i].gameObject);
         }
         curIngredients = new List<Ingredient>();
     }

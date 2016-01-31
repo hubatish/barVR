@@ -31,7 +31,7 @@ GameObject:
   - 114: {fileID: 11490704}
   - 114: {fileID: 11468346}
   - 65: {fileID: 6529884}
-  - 54: {fileID: 5423850}
+  - 54: {fileID: 5462750}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -46,7 +46,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 4.32, y: 0, z: -4.161}
+=======
+  m_LocalPosition: {x: 3.44, y: -3.68, z: 1.23}
+>>>>>>> 47987068872ab2428056a03fbf66cd9ed5e8978a
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 480084}
@@ -58,9 +62,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138990}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.03, y: -0.113, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalRotation: {x: -0.38194752, y: 0, z: 0, w: 0.9241841}
+  m_LocalPosition: {x: 0, y: 0, z: -4.94}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+>>>>>>> 47987068872ab2428056a03fbf66cd9ed5e8978a
   m_Children: []
   m_Father: {fileID: 437746}
   m_RootOrder: 0
@@ -97,7 +107,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138990}
   m_Mesh: {fileID: 4300000, guid: de43d038485efcf4abee3158c37372f6, type: 3}
---- !u!54 &5423850
+--- !u!54 &5462750
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -170,6 +180,8 @@ MonoBehaviour:
       InstanceTarget: {fileID: 11468346}
     - LIIF: -1315617769
       InstanceTarget: {fileID: 6529884}
+    - LIIF: 1718390823
+      InstanceTarget: {fileID: 5462750}
     - LIIF: -1326995652
       InstanceTarget: {fileID: 11437192}
     - LIIF: -1429609824
@@ -182,8 +194,6 @@ MonoBehaviour:
       InstanceTarget: {fileID: 480084}
     - LIIF: 1427655415
       InstanceTarget: {fileID: 138990}
-    - LIIF: -1027585239
-      InstanceTarget: {fileID: 5423850}
   Modifications:
     Modificated:
     - Object: {fileID: 171162}
@@ -192,15 +202,24 @@ MonoBehaviour:
       Mode: 0
     - Object: {fileID: 437746}
       ObjeckLink: -1364344834
+      PropertyPath: m_LocalPosition
+      Mode: 0
+    - Object: {fileID: 437746}
+      ObjeckLink: -1364344834
       PropertyPath: m_RootOrder
       Mode: 0
     NonPrefabObjects:
     - child: {fileID: 480084}
       parent: {fileID: 437746}
+<<<<<<< HEAD
     NonPrefabComponents:
     - child: {fileID: 5423850}
       parent: {fileID: 171162}
     RemovedObjects: 27906c66
+=======
+    NonPrefabComponents: []
+    RemovedObjects: 
+>>>>>>> 47987068872ab2428056a03fbf66cd9ed5e8978a
     TransformParentChanges: []
   ParentPrefabGUID: 2fbf873d7179d834aa2adda39e21aae8
   PrefabGUID: c9fdd89e8b86347449e51f28598a8163
@@ -257,6 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11490704}
+  shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+  doOnce: 1
 --- !u!114 &11490704
 MonoBehaviour:
   m_ObjectHideFlags: 1

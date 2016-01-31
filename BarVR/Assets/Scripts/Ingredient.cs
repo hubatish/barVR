@@ -21,7 +21,7 @@ public class Ingredient : Selectable {
             return false;
         }
 
-        if(formingCombination == null)
+        if(formingCombination == null || formingCombination.ingredients.Count==0)
         {
             string otherName = c.ToString();
             string myName = ToString();
@@ -38,8 +38,11 @@ public class Ingredient : Selectable {
         }
     }
 
+    public Action onSelect = delegate () { };
+
     public override void Select()
     {
+        onSelect();
         PlayerHand.Instance.Grab(this);
     }
 
@@ -53,6 +56,20 @@ public class Ingredient : Selectable {
             sName.Remove(cloneStart,dumbString.Length);
         }
         return sName;
+    }
+
+    public void ClearAll()
+    {
+        for(int i= transform.childCount-1; i>=0;i--)
+        {
+            GameObject.Destroy(transform.GetChild(i).gameObject);
+        }
+        Selector selector = GetComponent<Selector>();
+        if (selector != null)
+        {
+            Destroy(selector);
+        }
+        gameObject.SetActive(false);
     }
 
     protected string StripString(string s)
