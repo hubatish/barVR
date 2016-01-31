@@ -100,18 +100,18 @@ MonoBehaviour:
       InstanceTarget: {fileID: 11411348}
     - LIIF: -1315617769
       InstanceTarget: {fileID: 6547888}
+    - LIIF: 1718390823
+      InstanceTarget: {fileID: 5446004}
   Modifications:
     Modificated:
-    - Object: {fileID: 106566}
-      ObjeckLink: 1898382997
-      PropertyPath: m_IsActive
-      Mode: 0
     - Object: {fileID: 491382}
       ObjeckLink: -1364344834
       PropertyPath: m_RootOrder
       Mode: 0
     NonPrefabObjects: []
-    NonPrefabComponents: []
+    NonPrefabComponents:
+    - child: {fileID: 5446004}
+      parent: {fileID: 106566}
     RemovedObjects: 
     TransformParentChanges: []
   ParentPrefabGUID: 
