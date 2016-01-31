@@ -823,6 +823,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1128220293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128220290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39878f6902921b045ae39e47cbec9c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sepiaTone: {fileID: 4800000, guid: b6aa781cad112c75d0008dfa8d76c639, type: 3}
+  effectTime: 20
 --- !u!1001 &1169754144
 Prefab:
   m_ObjectHideFlags: 0
@@ -1104,26 +1117,6 @@ Prefab:
     - target: {fileID: 415294, guid: f86e3899f1fe2e9488959b2354d0ba48, type: 2}
       propertyPath: m_RootOrder
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 411470, guid: f86e3899f1fe2e9488959b2354d0ba48, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 411470, guid: f86e3899f1fe2e9488959b2354d0ba48, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 491612, guid: f86e3899f1fe2e9488959b2354d0ba48, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -4.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 491612, guid: f86e3899f1fe2e9488959b2354d0ba48, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 491612, guid: f86e3899f1fe2e9488959b2354d0ba48, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f86e3899f1fe2e9488959b2354d0ba48, type: 2}
