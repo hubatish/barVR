@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// Display how to make an ingredient
@@ -19,8 +21,23 @@ public class Recipe : MonoBehaviour {
     public void SetCombination()
     {
         combination = GetRandomCombination();
+
+        //actual ingredient doesn't matter
+        var newIngredient = MasterIngredientList.Instance.baseIngredients[0];
+        newIngredient = (Ingredient)GameObject.Instantiate(newIngredient);
+        newIngredient.transform.SetParent(transform);
+        newIngredient.gameObject.SetActive(false);
+        newIngredient.formingCombination = combination;
+        combination.product = newIngredient;
+
+        //Populate recipe text
+        PopulateRecipe(combination);
+    }
+
+    public void PopulateRecipe(Combination combination)
+    {
         string instructions = combination.method.ToString() + " ";
-        for(int i=0;i<combination.ingredients.Count;i++)
+        for (int i = 0; i < combination.ingredients.Count; i++)
         {
             instructions += combination.ingredients[i].ToString();
             if (i != combination.ingredients.Count - 1)
@@ -33,8 +50,14 @@ public class Recipe : MonoBehaviour {
 
     protected Combination GetRandomCombination()
     {
-        var combos = MasterIngredientList.Instance.combinations;
+        /*var combos = MasterIngredientList.Instance.combinations;
         var r = UnityEngine.Random.Range(0, combos.Count);
-        return combos[r];
+        return combos[r];*/
+                int numI = UnityEngine.Random.Range(1, 3);
+                var bases = MasterIngredientList.Instance.baseIngredients;
+                bases = RandomArrayTool.Randomize<Ingredient>(bases.ToArray()).ToList();
+                var ingredients = bases.Take(numI).ToList();
+                Combination combo = new Combination(ingredients, (PrepMethod) UnityEngine.Random.Range(0, 3));
+                return combo;
     }
 }

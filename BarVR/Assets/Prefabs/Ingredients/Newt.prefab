@@ -174,6 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11489250}
+  shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+  doOnce: 1
 --- !u!114 &11402902
 MonoBehaviour:
   m_ObjectHideFlags: 33
@@ -203,14 +205,10 @@ MonoBehaviour:
       InstanceTarget: {fileID: 6537888}
     - LIIF: -1680079764
       InstanceTarget: {fileID: 2318602}
-    - LIIF: -2109890363
-      InstanceTarget: {fileID: 0}
     - LIIF: 232252630
       InstanceTarget: {fileID: 3342752}
     - LIIF: -1480856693
       InstanceTarget: {fileID: 170464}
-    - LIIF: 661308755
-      InstanceTarget: {fileID: 0}
     - LIIF: 992064995
       InstanceTarget: {fileID: 22408316}
     - LIIF: -1479362159
@@ -225,11 +223,21 @@ MonoBehaviour:
       InstanceTarget: {fileID: 2343026}
     - LIIF: 476531849
       InstanceTarget: {fileID: 10271842}
+    - LIIF: 1425456909
+      InstanceTarget: {fileID: 22250876}
   Modifications:
     Modificated:
     - Object: {fileID: 179144}
       ObjeckLink: 1898382997
       PropertyPath: m_Name
+      Mode: 0
+    - Object: {fileID: 11402164}
+      ObjeckLink: 430875890
+      PropertyPath: shader
+      Mode: 0
+    - Object: {fileID: 6537888}
+      ObjeckLink: -1315617769
+      PropertyPath: m_Size
       Mode: 0
     NonPrefabObjects:
     - child: {fileID: 22408316}
@@ -237,7 +245,7 @@ MonoBehaviour:
     - child: {fileID: 22455464}
       parent: {fileID: 22404342}
     NonPrefabComponents: []
-    RemovedObjects: 
+    RemovedObjects: 27906c66
     TransformParentChanges: []
   ParentPrefabGUID: 2fbf873d7179d834aa2adda39e21aae8
   PrefabGUID: aaa5f50f6b7dbd14d9687e431aa88d95
@@ -326,6 +334,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shader
+      value: 
+      objectReference: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 179144}

@@ -21,7 +21,13 @@ public class PlayerHand : MonoBehaviour
 
     public void Grab(Ingredient ingredient)
     {
+        if (heldIngredient != null)
+        {
+            ReleaseWithForce();
+        }
         heldIngredient = ingredient;
+        heldIngredient.GetComponent<Rigidbody>().useGravity = false;
+        heldIngredient.GetComponent<BoxCollider>().enabled = false;
         MoveTo(ingredient, transform);
     }
 
@@ -30,6 +36,7 @@ public class PlayerHand : MonoBehaviour
         //Should tween
         ingredient.transform.position = t.position;
         ingredient.transform.SetParent(t);
+        ingredient.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
     /// <summary>
@@ -48,9 +55,19 @@ public class PlayerHand : MonoBehaviour
             return null;
         }
         var ingredient = heldIngredient;
+        heldIngredient.GetComponent<Rigidbody>().useGravity = true;
+        heldIngredient.GetComponent<BoxCollider>().enabled = true;
         heldIngredient = null;
         ingredient.transform.SetParent(null);
         return ingredient;
+    }
+
+    public float force = 8f;
+
+    protected void ReleaseWithForce()
+    {
+        Ingredient i = Release();
+        i.GetComponent<Rigidbody>().AddForce(transform.root.forward * force, ForceMode.Impulse);
     }
 
     [SerializeField]
@@ -60,9 +77,7 @@ public class PlayerHand : MonoBehaviour
     {
         if (heldIngredient != null && startIngredient==heldIngredient)
         {
-            float force = 10f;
-            Ingredient i = Release();
-            i.GetComponent<Rigidbody>().AddForce(Vector3.forward * force, ForceMode.Impulse);
+            ReleaseWithForce();
         }
         startIngredient = heldIngredient;
     }

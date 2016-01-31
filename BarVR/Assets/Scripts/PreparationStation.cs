@@ -35,7 +35,7 @@ public class PreparationStation : BaseStation
         anim.SetTrigger(boilhash);
 
         product = MasterIngredientList.Instance.CombineIngredients(curIngredients, method);
-        product = (Ingredient)GameObject.Instantiate(product, ingredientSpots[0].position, Quaternion.identity);
+        product.transform.position = ingredientSpots[0].position;
 
         ClearIngredients();
     }
