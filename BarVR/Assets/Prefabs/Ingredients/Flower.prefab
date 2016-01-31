@@ -255,13 +255,13 @@ MonoBehaviour:
     - LIIF: 308786172
       InstanceTarget: {fileID: 3334992}
     - LIIF: 1751511836
-      InstanceTarget: {fileID: 10246728}
+      InstanceTarget: {fileID: 0}
     - LIIF: 366327226
-      InstanceTarget: {fileID: 2348636}
+      InstanceTarget: {fileID: 0}
     - LIIF: -387013203
-      InstanceTarget: {fileID: 402448}
+      InstanceTarget: {fileID: 0}
     - LIIF: 164206504
-      InstanceTarget: {fileID: 129976}
+      InstanceTarget: {fileID: 0}
   Modifications:
     Modificated:
     - Object: {fileID: 103420}
@@ -279,7 +279,7 @@ MonoBehaviour:
     NonPrefabObjects:
     - child: {fileID: 421992}
       parent: {fileID: 480336}
-    - child: {fileID: 402448}
+    - child: {fileID: 0}
       parent: {fileID: 480336}
     NonPrefabComponents:
     - child: {fileID: 6515422}
