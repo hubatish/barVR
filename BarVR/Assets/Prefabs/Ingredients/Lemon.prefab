@@ -1,86 +1,87 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &109326
+--- !u!1 &135902
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 402896}
-  - 33: {fileID: 3335538}
-  - 135: {fileID: 13587814}
-  - 23: {fileID: 2309662}
+  - 4: {fileID: 407424}
+  - 33: {fileID: 3393482}
+  - 23: {fileID: 2331754}
+  - 95: {fileID: 9571310}
+  - 114: {fileID: 11462512}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Lemon_v01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &164770
+--- !u!1 &157420
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 424316}
-  - 114: {fileID: 11445532}
-  - 114: {fileID: 11484418}
-  - 114: {fileID: 11434960}
-  - 65: {fileID: 6572532}
-  - 54: {fileID: 5439670}
+  - 4: {fileID: 460116}
+  - 114: {fileID: 11457874}
+  - 114: {fileID: 11456444}
+  - 114: {fileID: 11419926}
+  - 65: {fileID: 6549830}
+  - 54: {fileID: 5453260}
   m_Layer: 0
-  m_Name: EyeOfNewt
+  m_Name: Lemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &402896
+--- !u!4 &407424
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109326}
+  m_GameObject: {fileID: 135902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 424316}
+  m_Father: {fileID: 460116}
   m_RootOrder: 0
---- !u!4 &424316
+--- !u!4 &460116
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164770}
+  m_GameObject: {fileID: 157420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.7544446, y: 0.31364486, z: -4.3189974}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 402896}
+  - {fileID: 407424}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2309662
+--- !u!23 &2331754
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109326}
+  m_GameObject: {fileID: 135902}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4d24bc3c93ae8744c9fb8eb9bbcf90a5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
@@ -89,19 +90,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3335538
+--- !u!33 &3393482
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109326}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5439670
+  m_GameObject: {fileID: 135902}
+  m_Mesh: {fileID: 4300000, guid: d1e57a5671f986943bf3a59c2e8ad7e6, type: 3}
+--- !u!54 &5453260
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164770}
+  m_GameObject: {fileID: 157420}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -111,36 +112,64 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6572532
+--- !u!65 &6549830
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164770}
+  m_GameObject: {fileID: 157420}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11434960
+--- !u!95 &9571310
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d1e57a5671f986943bf3a59c2e8ad7e6, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11419926
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164770}
+  m_GameObject: {fileID: 157420}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fa757b888338424c83940daceb3fc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toSelect: {fileID: 11484418}
---- !u!114 &11445532
+  toSelect: {fileID: 11456444}
+--- !u!114 &11456444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814d6c80143cfa144abc4478fb7a4827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11457874
 MonoBehaviour:
   m_ObjectHideFlags: 33
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164770}
+  m_GameObject: {fileID: 157420}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46a02d0f612a241b293c0da4f82b712c, type: 3}
@@ -153,94 +182,98 @@ MonoBehaviour:
   Links:
     Links:
     - LIIF: -980943360
-      InstanceTarget: {fileID: 11445532}
+      InstanceTarget: {fileID: 11457874}
     - LIIF: 1898382997
-      InstanceTarget: {fileID: 164770}
+      InstanceTarget: {fileID: 157420}
     - LIIF: -1364344834
-      InstanceTarget: {fileID: 424316}
+      InstanceTarget: {fileID: 460116}
     - LIIF: -749247627
-      InstanceTarget: {fileID: 11484418}
+      InstanceTarget: {fileID: 11456444}
     - LIIF: 430875890
-      InstanceTarget: {fileID: 11434960}
+      InstanceTarget: {fileID: 11419926}
     - LIIF: -1315617769
-      InstanceTarget: {fileID: 6572532}
+      InstanceTarget: {fileID: 6549830}
     - LIIF: 1718390823
-      InstanceTarget: {fileID: 5439670}
-    - LIIF: 146867409
-      InstanceTarget: {fileID: 2309662}
-    - LIIF: 1315294559
-      InstanceTarget: {fileID: 13587814}
-    - LIIF: -2093246509
-      InstanceTarget: {fileID: 3335538}
-    - LIIF: -644968809
-      InstanceTarget: {fileID: 402896}
-    - LIIF: 676568789
-      InstanceTarget: {fileID: 109326}
+      InstanceTarget: {fileID: 5453260}
+    - LIIF: -826355383
+      InstanceTarget: {fileID: 135902}
+    - LIIF: -2086024601
+      InstanceTarget: {fileID: 407424}
+    - LIIF: 1805158782
+      InstanceTarget: {fileID: 11462512}
+    - LIIF: 1461446992
+      InstanceTarget: {fileID: 9571310}
+    - LIIF: -88346173
+      InstanceTarget: {fileID: 2331754}
+    - LIIF: 1008373151
+      InstanceTarget: {fileID: 3393482}
   Modifications:
     Modificated:
-    - Object: {fileID: 164770}
+    - Object: {fileID: 157420}
       ObjeckLink: 1898382997
       PropertyPath: m_Name
       Mode: 0
-    - Object: {fileID: 424316}
-      ObjeckLink: -1364344834
-      PropertyPath: m_LocalPosition
-      Mode: 0
-    - Object: {fileID: 424316}
+    - Object: {fileID: 460116}
       ObjeckLink: -1364344834
       PropertyPath: m_RootOrder
       Mode: 0
     NonPrefabObjects:
-    - child: {fileID: 402896}
-      parent: {fileID: 424316}
+    - child: {fileID: 407424}
+      parent: {fileID: 460116}
     NonPrefabComponents: []
     RemovedObjects: 
     TransformParentChanges: []
   ParentPrefabGUID: 2fbf873d7179d834aa2adda39e21aae8
-  PrefabGUID: d5962578f4c15fe47be5a4478ccc2156
---- !u!114 &11484418
+  PrefabGUID: d59f5bf8e09601048a95d219929d2d90
+--- !u!114 &11462512
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 33
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164770}
+  m_GameObject: {fileID: 135902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 814d6c80143cfa144abc4478fb7a4827, type: 3}
+  m_Script: {fileID: 11500000, guid: 46a02d0f612a241b293c0da4f82b712c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &13587814
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109326}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  Properties:
+    Properties: []
+    Groups: []
+    Hidden: 
+  Links:
+    Links:
+    - LIIF: 1346582609
+      InstanceTarget: {fileID: 11462512}
+    - LIIF: -1583942645
+      InstanceTarget: {fileID: 9571310}
+    - LIIF: -1863392894
+      InstanceTarget: {fileID: 2331754}
+    - LIIF: -626934547
+      InstanceTarget: {fileID: 3393482}
+    - LIIF: -765337030
+      InstanceTarget: {fileID: 407424}
+    - LIIF: -233967762
+      InstanceTarget: {fileID: 135902}
+  Modifications:
+    Modificated:
+    - Object: {fileID: 407424}
+      ObjeckLink: -765337030
+      PropertyPath: m_LocalPosition
+      Mode: 0
+    NonPrefabObjects: []
+    NonPrefabComponents: []
+    RemovedObjects: 
+    TransformParentChanges: []
+  ParentPrefabGUID: 
+  PrefabGUID: d1e57a5671f986943bf3a59c2e8ad7e6
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Text
-      value: EyeOfNewt
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.rgba
-      value: 4281085149
-      objectReference: {fileID: 0}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 164770}
+  m_RootGameObject: {fileID: 157420}
   m_IsPrefabParent: 1
