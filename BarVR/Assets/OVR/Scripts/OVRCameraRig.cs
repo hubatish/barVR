@@ -96,7 +96,11 @@ public class OVRCameraRig : MonoBehaviour
 		if (!Application.isPlaying)
 			return;
 
-		UpdateAnchors();
+#if UNITY_EDITOR
+        GetComponent<MouseCameraControl>().enabled = true;
+        #endif
+
+        UpdateAnchors();
 	}
 
 	private void Update()
@@ -124,7 +128,7 @@ public class OVRCameraRig : MonoBehaviour
             }
         }
 #endif
-	}
+    }
 
 #endregion
 
