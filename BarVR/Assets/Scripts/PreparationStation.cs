@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class PreparationStation : BaseStation
 {
+    Animator anim;
+    int boilhash = Animator.StringToHash("shake");
+
     public Ingredient product;
 
     public PrepMethod method;
@@ -14,6 +17,7 @@ public class PreparationStation : BaseStation
 
     protected void Start()
     {
+        anim = GetComponent<Animator>();
         timer.done = FinishPrep;
     }
 
@@ -28,6 +32,8 @@ public class PreparationStation : BaseStation
     public void FinishPrep()
     {
         Debug.Log("Done prepping!");
+        anim.SetTrigger(boilhash);
+
         product = MasterIngredientList.Instance.CombineIngredients(curIngredients, method);
         product = (Ingredient)GameObject.Instantiate(product, ingredientSpots[0].position, Quaternion.identity);
 
