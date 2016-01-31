@@ -140,7 +140,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164572}
-  m_Mesh: {fileID: 4300000, guid: 9ad51c8e738dcf94696749c28d0b3c9f, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 2ad22dc3cc63c4c4999567c9c4eaeefc, type: 3}
 --- !u!54 &5483006
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -277,9 +277,9 @@ MonoBehaviour:
       PropertyPath: m_Name
       Mode: 0
     NonPrefabObjects:
-    - child: {fileID: 400688}
-      parent: {fileID: 499268}
     - child: {fileID: 22455464}
+      parent: {fileID: 499268}
+    - child: {fileID: 400688}
       parent: {fileID: 499268}
     NonPrefabComponents: []
     RemovedObjects: 174495b127906c66
@@ -382,6 +382,10 @@ Prefab:
       propertyPath: shader
       value: 
       objectReference: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 2ad22dc3cc63c4c4999567c9c4eaeefc, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 179144}
