@@ -12,7 +12,7 @@ public class MasterIngredientList : MonoBehaviour
         Instance = this;
     }
 
-    public List<Ingredient> ingredients = new List<Ingredient>();
+    public List<Ingredient> baseIngredients = new List<Ingredient>();
 
     public List<Combination> combinations = new List<Combination>();
 
@@ -32,12 +32,29 @@ public class MasterIngredientList : MonoBehaviour
     /// <returns></returns>
     public Ingredient CombineIngredients(List<Ingredient> foods, PrepMethod method)
     {
-        Combination combo = combinations.FirstOrDefault(c => c.Equals(new Combination(foods, method)));
+        Ingredient newIngredient;
+        Combination former = new Combination(foods, method);
+        Combination combo = combinations.FirstOrDefault(c => c.Equals(former));
         if(combo == null)
         {
-            return failure;
+            newIngredient = failure;
         }
-        return combo.product;
+        else
+        {
+            newIngredient = combo.product;
+        }
+
+        //Clear that list of ingredients
+        //  but derpily keep them around for checks
+        foreach(var food in foods)
+        {
+            food.ClearAll();
+            food.transform.SetParent(transform);
+        }
+
+        newIngredient = GameObject.Instantiate(newIngredient);
+        newIngredient.formingCombination = former;
+        return newIngredient;
     }
 }
 
@@ -71,10 +88,27 @@ public class Combination
             return false;
         }
 
-        //both lists have same values
-        var onlyMine = ingredients.Except(c.ingredients);
-        var onlyTheirs = c.ingredients.Except(ingredients);
-        return (onlyMine.Count()==onlyTheirs.Count() && onlyMine.Count()==0);
+        //check both lists equals
+        if (ingredients == null || c.ingredients == null || ingredients.Count != c.ingredients.Count)
+        {
+            return false;
+        }
+        for (int i = 0; i < ingredients.Count; i++)
+        {
+            bool foundOne = false;
+            for (int j = 0; j < c.ingredients.Count; j++)
+            {
+                if (c.ingredients[j].Equals(ingredients[i]))
+                {
+                    foundOne = true;
+                }
+            }
+            if (!foundOne)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public List<Ingredient> ingredients = new List<Ingredient>();

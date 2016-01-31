@@ -39,11 +39,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9228aa642b6ad8d4c89b581789a3fc12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredients:
+  baseIngredients:
   - {fileID: 11489250, guid: aaa5f50f6b7dbd14d9687e431aa88d95, type: 2}
   - {fileID: 11498920, guid: 6ecd6ca09f7e97c4082849e52c5817b4, type: 2}
-  - {fileID: 11484418, guid: d5962578f4c15fe47be5a4478ccc2156, type: 2}
-  - {fileID: 11404800, guid: 06303af605c7a884d8119c840a6d37db, type: 2}
+  - {fileID: 11456444, guid: d59f5bf8e09601048a95d219929d2d90, type: 2}
+  - {fileID: 11490704, guid: c9fdd89e8b86347449e51f28598a8163, type: 2}
+  - {fileID: 11456550, guid: eb9866c3dee90024cb3c9c8c676809c9, type: 2}
   combinations:
   - ingredients:
     - {fileID: 11489250, guid: aaa5f50f6b7dbd14d9687e431aa88d95, type: 2}
