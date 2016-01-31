@@ -191,6 +191,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6549830, guid: d59f5bf8e09601048a95d219929d2d90, type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549830, guid: d59f5bf8e09601048a95d219929d2d90, type: 2}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549830, guid: d59f5bf8e09601048a95d219929d2d90, type: 2}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549830, guid: d59f5bf8e09601048a95d219929d2d90, type: 2}
+      propertyPath: m_Center.y
+      value: 0.21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d59f5bf8e09601048a95d219929d2d90, type: 2}
   m_IsPrefabParent: 0
@@ -464,7 +480,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421992, guid: eb9866c3dee90024cb3c9c8c676809c9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.06
+      value: 5.42
       objectReference: {fileID: 0}
     - target: {fileID: 421992, guid: eb9866c3dee90024cb3c9c8c676809c9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1087,6 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heldIngredient: {fileID: 0}
+  force: 8
   startIngredient: {fileID: 0}
 --- !u!1001 &1861576730
 Prefab:
@@ -1373,6 +1390,10 @@ Prefab:
     - target: {fileID: 400000, guid: 1f65f7f20dbced240aefe2875c67ead3, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 1f65f7f20dbced240aefe2875c67ead3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f65f7f20dbced240aefe2875c67ead3, type: 2}
