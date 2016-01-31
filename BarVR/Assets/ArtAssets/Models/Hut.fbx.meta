@@ -1,14 +1,38 @@
 fileFormatVersion: 2
-guid: 11a7fe4f401854f4599aa7dab02b8cd7
+guid: 15f313c53c4e0d649af1642683718163
+timeCreated: 1454245153
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCylinder18
-    9500000: //RootNode
+    100000: Camera
+    100002: //RootNode
+    100004: Hut
+    100006: Lamp
+    100008: Lamp.001
+    100010: Lamp.002
+    100012: Lamp.003
+    100014: Lamp.004
+    100016: Lamp.005
+    100018: Lamp.006
+    100020: Suzanne
+    400000: Camera
+    400002: //RootNode
+    400004: Hut
+    400006: Lamp
+    400008: Lamp.001
+    400010: Lamp.002
+    400012: Lamp.003
+    400014: Lamp.004
+    400016: Lamp.005
+    400018: Lamp.006
+    400020: Suzanne
+    2300000: Hut
+    2300002: Suzanne
+    3300000: Hut
+    3300002: Suzanne
+    4300000: Suzanne
+    4300002: Hut
     11400000: //RootNode
   materials:
     importMaterials: 1
@@ -34,7 +58,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -68,7 +92,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

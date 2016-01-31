@@ -30,8 +30,8 @@ GameObject:
   - 114: {fileID: 11457874}
   - 114: {fileID: 11456444}
   - 114: {fileID: 11419926}
-  - 65: {fileID: 6549830}
   - 54: {fileID: 5453260}
+  - 135: {fileID: 13517066}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Untagged
@@ -58,7 +58,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: -0.43, y: 0, z: -0.45}
+=======
   m_LocalPosition: {x: -0.75, y: 0, z: 0}
+>>>>>>> 47987068872ab2428056a03fbf66cd9ed5e8978a
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407424}
@@ -74,7 +78,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4d24bc3c93ae8744c9fb8eb9bbcf90a5, type: 2}
+  - {fileID: 2100000, guid: 84c613ed1ca2ba444a773cb9ca9ba42a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -104,26 +108,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157420}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 9
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6549830
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157420}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9571310
 Animator:
   serializedVersion: 3
@@ -197,8 +189,6 @@ MonoBehaviour:
       InstanceTarget: {fileID: 11456444}
     - LIIF: 430875890
       InstanceTarget: {fileID: 11419926}
-    - LIIF: -1315617769
-      InstanceTarget: {fileID: 6549830}
     - LIIF: 1718390823
       InstanceTarget: {fileID: 5453260}
     - LIIF: -826355383
@@ -213,6 +203,8 @@ MonoBehaviour:
       InstanceTarget: {fileID: 2331754}
     - LIIF: 1008373151
       InstanceTarget: {fileID: 3393482}
+    - LIIF: 1476160652
+      InstanceTarget: {fileID: 13517066}
   Modifications:
     Modificated:
     - Object: {fileID: 157420}
@@ -276,6 +268,18 @@ MonoBehaviour:
     TransformParentChanges: []
   ParentPrefabGUID: 
   PrefabGUID: d1e57a5671f986943bf3a59c2e8ad7e6
+--- !u!135 &13517066
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.609167
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

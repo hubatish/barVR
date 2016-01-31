@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: d59f5bf8e09601048a95d219929d2d90
+<<<<<<< HEAD
+timeCreated: 1454246371
+=======
 timeCreated: 1454228936
+>>>>>>> 47987068872ab2428056a03fbf66cd9ed5e8978a
 licenseType: Free
 NativeFormatImporter:
   userData: HaveNested_true
