@@ -25,7 +25,7 @@ public class BaseStation : Selectable
             //ingredient.transform.SetParent(ingredientSpots[numI]);
             ingredient.transform.position = ingredientSpots[numI].position;
             ingredient.GetComponent<Collider>().enabled = true;
-            //ingredient.GetComponent<Rigidbody>().isKinematic = true;
+            ingredient.GetComponent<Rigidbody>().isKinematic = true;
         });
         curIngredients.Add(ingredient);
         ingredient.onSelect += delegate ()
@@ -38,7 +38,7 @@ public class BaseStation : Selectable
     {
         if (curIngredients.Contains(ingredient))
         {
-            //ingredient.GetComponent<Rigidbody>().isKinematic = false;
+            ingredient.GetComponent<Rigidbody>().isKinematic = false;
             curIngredients.Remove(ingredient);
             ingredient.onSelect = delegate () { };
         }
