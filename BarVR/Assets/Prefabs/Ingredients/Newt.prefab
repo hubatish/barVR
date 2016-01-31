@@ -219,7 +219,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11489250}
   shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
-  doOnce: 1
 --- !u!114 &11402902
 MonoBehaviour:
   m_ObjectHideFlags: 33
