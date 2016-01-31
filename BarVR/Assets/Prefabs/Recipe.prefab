@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22415630}
   - 222: {fileID: 22252974}
   - 114: {fileID: 11478110}
+  - 114: {fileID: 11404330}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -55,9 +56,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &11406536
+--- !u!114 &11404330
 MonoBehaviour:
   m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f97332026f10c43a1c4a0ddbf22ea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  A: {r: 1, g: 0, b: 1, a: 1}
+  B: {r: 0, g: 0, b: 1, a: 1}
+  speed: 1
+--- !u!114 &11406536
+MonoBehaviour:
+  m_ObjectHideFlags: 33
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188596}
@@ -124,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.209, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -134,14 +149,14 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 60
-    m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_Alignment: 4
+    m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Boil the thing
@@ -221,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipe: {fileID: 11493216}
+  healAmount: 20
 --- !u!114 &11493216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,6 +249,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 11443378}
+  combination:
+    ingredients: []
+    method: 0
+    product: {fileID: 0}
 --- !u!222 &22212304
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -271,7 +291,7 @@ RectTransform:
   m_GameObject: {fileID: 115928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 22493240}
   m_RootOrder: 0
@@ -303,7 +323,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188596}
-  m_LocalRotation: {x: 0.50000006, y: 0, z: 0, w: 0.8660254}
+  m_LocalRotation: {x: 0.34202018, y: 0, z: 0, w: 0.9396926}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -313,7 +333,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.83, y: 0}
+  m_AnchoredPosition: {x: 0.14, y: 2.63}
   m_SizeDelta: {x: 1.5, y: 2.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000
