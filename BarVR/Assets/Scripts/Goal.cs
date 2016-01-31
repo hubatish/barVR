@@ -24,6 +24,7 @@ public class Goal : MonoBehaviour {
     {
         if (recipe.combination.product.Equals(final))
         {
+            Debug.Log("winnig");
             recipe.SetCombination();
             Health.Instance.LoseHealth(-healAmount);
         }

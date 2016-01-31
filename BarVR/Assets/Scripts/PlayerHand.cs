@@ -32,6 +32,7 @@ public class PlayerHand : MonoBehaviour
         //Should tween
         ingredient.transform.position = t.position;
         ingredient.transform.SetParent(t);
+        ingredient.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
     /// <summary>

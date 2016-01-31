@@ -14,7 +14,7 @@ public class DrinkStation : BaseStation
     public override void UseIngredients()
     {
         Goal.Instance.TryCombo(curIngredients[0]);
-        Debug.Log("drinking: " + curIngredients[0].ToString());
+        //Debug.Log("drinking: " + curIngredients[0].ToString());
         ClearIngredients();
     }
 }
