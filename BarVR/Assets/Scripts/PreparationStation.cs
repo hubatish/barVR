@@ -31,6 +31,7 @@ public class PreparationStation : BaseStation
 
     public override void UseIngredients()
     {
+        base.UseIngredients();
         //They clicked while have ingredients in Station
         if (animEffect != null)
         {

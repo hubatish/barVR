@@ -156,6 +156,7 @@ GameObject:
   - 65: {fileID: 6573880}
   - 54: {fileID: 5443784}
   - 95: {fileID: 9555798}
+  - 82: {fileID: 8266336}
   m_Layer: 0
   m_Name: Boiler
   m_TagString: Untagged
@@ -1535,6 +1536,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0263305, y: 1.5035514, z: 2.2299428}
   m_Center: {x: 0.000000059604645, y: 0.73692864, z: -0.00000017881393}
+--- !u!82 &8266336
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148304}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 44f0d452151f7964eb8f7bf8532eb656, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9514706
 Animator:
   serializedVersion: 3
@@ -1688,7 +1763,11 @@ MonoBehaviour:
     - LIIF: -233967762
       InstanceTarget: {fileID: 175622}
   Modifications:
-    Modificated: []
+    Modificated:
+    - Object: {fileID: 443470}
+      ObjeckLink: -765337030
+      PropertyPath: m_LocalPosition
+      Mode: 0
     NonPrefabObjects: []
     NonPrefabComponents: []
     RemovedObjects: 
@@ -1708,7 +1787,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11469202}
   shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
-  doOnce: 1
 --- !u!114 &11451924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1768,6 +1846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bf6ea9bc20bce4e9c8a866a5d43553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 8266336}
   curIngredients: []
   ingredientSpots:
   - {fileID: 475640}
@@ -1858,8 +1937,6 @@ MonoBehaviour:
       InstanceTarget: {fileID: 11469202}
     - LIIF: 1920850964
       InstanceTarget: {fileID: 11433266}
-    - LIIF: 1046608538
-      InstanceTarget: {fileID: 0}
     - LIIF: 177609203
       InstanceTarget: {fileID: 475640}
     - LIIF: 145611091
@@ -1892,16 +1969,146 @@ MonoBehaviour:
       InstanceTarget: {fileID: 191654}
     - LIIF: -1676774268
       InstanceTarget: {fileID: 419812}
-    - LIIF: -451418834
-      InstanceTarget: {fileID: 0}
-    - LIIF: 444359492
-      InstanceTarget: {fileID: 0}
-    - LIIF: -1346242046
-      InstanceTarget: {fileID: 0}
-    - LIIF: -800476041
-      InstanceTarget: {fileID: 0}
-    - LIIF: 632714256
-      InstanceTarget: {fileID: 0}
+    - LIIF: -572353783
+      InstanceTarget: {fileID: 8266336}
+    - LIIF: 801552392
+      InstanceTarget: {fileID: 6573880}
+    - LIIF: 318272648
+      InstanceTarget: {fileID: 5443784}
+    - LIIF: -1602755312
+      InstanceTarget: {fileID: 9555798}
+    - LIIF: 1739576166
+      InstanceTarget: {fileID: 443470}
+    - LIIF: 404801881
+      InstanceTarget: {fileID: 425992}
+    - LIIF: 1942239842
+      InstanceTarget: {fileID: 456078}
+    - LIIF: 1828953980
+      InstanceTarget: {fileID: 2311534}
+    - LIIF: 1526168643
+      InstanceTarget: {fileID: 180996}
+    - LIIF: -1506967211
+      InstanceTarget: {fileID: 470190}
+    - LIIF: 940571868
+      InstanceTarget: {fileID: 437150}
+    - LIIF: -297352255
+      InstanceTarget: {fileID: 460126}
+    - LIIF: 333930125
+      InstanceTarget: {fileID: 441950}
+    - LIIF: -1693952719
+      InstanceTarget: {fileID: 408732}
+    - LIIF: 2120970166
+      InstanceTarget: {fileID: 490018}
+    - LIIF: -1404993127
+      InstanceTarget: {fileID: 427932}
+    - LIIF: -571939619
+      InstanceTarget: {fileID: 437700}
+    - LIIF: -3908740
+      InstanceTarget: {fileID: 460660}
+    - LIIF: -699644236
+      InstanceTarget: {fileID: 2313486}
+    - LIIF: 894391445
+      InstanceTarget: {fileID: 108954}
+    - LIIF: 1743534756
+      InstanceTarget: {fileID: 2338384}
+    - LIIF: 923854163
+      InstanceTarget: {fileID: 175622}
+    - LIIF: 1694145262
+      InstanceTarget: {fileID: 163396}
+    - LIIF: -1088172605
+      InstanceTarget: {fileID: 11401336}
+    - LIIF: 512399274
+      InstanceTarget: {fileID: 3312962}
+    - LIIF: 51281298
+      InstanceTarget: {fileID: 2308232}
+    - LIIF: 1653499015
+      InstanceTarget: {fileID: 9514706}
+    - LIIF: -1318172788
+      InstanceTarget: {fileID: 11421080}
+    - LIIF: 167204893
+      InstanceTarget: {fileID: 190526}
+    - LIIF: 1515652915
+      InstanceTarget: {fileID: 133684}
+    - LIIF: -1407442574
+      InstanceTarget: {fileID: 105476}
+    - LIIF: 1180591225
+      InstanceTarget: {fileID: 112268}
+    - LIIF: 1394332733
+      InstanceTarget: {fileID: 168558}
+    - LIIF: -1795320325
+      InstanceTarget: {fileID: 182018}
+    - LIIF: -1027444658
+      InstanceTarget: {fileID: 2390818}
+    - LIIF: -588734431
+      InstanceTarget: {fileID: 10237606}
+    - LIIF: 1691609531
+      InstanceTarget: {fileID: 183738}
+    - LIIF: -540720427
+      InstanceTarget: {fileID: 117546}
+    - LIIF: 718677771
+      InstanceTarget: {fileID: 1530312}
+    - LIIF: 1600260687
+      InstanceTarget: {fileID: 1280408}
+    - LIIF: 567203484
+      InstanceTarget: {fileID: 2672854}
+    - LIIF: 1361157034
+      InstanceTarget: {fileID: 11420046}
+    - LIIF: 1652903031
+      InstanceTarget: {fileID: 1551566}
+    - LIIF: -833707055
+      InstanceTarget: {fileID: 1270356}
+    - LIIF: -2125941464
+      InstanceTarget: {fileID: 2687444}
+    - LIIF: 867821581
+      InstanceTarget: {fileID: 1552346}
+    - LIIF: -951550976
+      InstanceTarget: {fileID: 1218484}
+    - LIIF: 1303607841
+      InstanceTarget: {fileID: 2639604}
+    - LIIF: 2047543932
+      InstanceTarget: {fileID: 1506116}
+    - LIIF: -751270954
+      InstanceTarget: {fileID: 1294788}
+    - LIIF: 1961669540
+      InstanceTarget: {fileID: 2664080}
+    - LIIF: 58717067
+      InstanceTarget: {fileID: 1563396}
+    - LIIF: -1820222748
+      InstanceTarget: {fileID: 1276756}
+    - LIIF: 358690088
+      InstanceTarget: {fileID: 2647794}
+    - LIIF: 1993686026
+      InstanceTarget: {fileID: 11472808}
+    - LIIF: -108317157
+      InstanceTarget: {fileID: 1528996}
+    - LIIF: -1584880133
+      InstanceTarget: {fileID: 1273300}
+    - LIIF: 1287096589
+      InstanceTarget: {fileID: 2680662}
+    - LIIF: -645760581
+      InstanceTarget: {fileID: 11457606}
+    - LIIF: -1718829742
+      InstanceTarget: {fileID: 1587494}
+    - LIIF: 678135927
+      InstanceTarget: {fileID: 1217588}
+    - LIIF: 1095238046
+      InstanceTarget: {fileID: 2634230}
+    - LIIF: -1610697666
+      InstanceTarget: {fileID: 1542000}
+    - LIIF: -1928890770
+      InstanceTarget: {fileID: 1266546}
+    - LIIF: -2027547344
+      InstanceTarget: {fileID: 2670906}
+    - LIIF: -171720791
+      InstanceTarget: {fileID: 11453070}
+    - LIIF: -1362974832
+      InstanceTarget: {fileID: 1578660}
+    - LIIF: -679082278
+      InstanceTarget: {fileID: 1249844}
+    - LIIF: -33141008
+      InstanceTarget: {fileID: 2639810}
+    - LIIF: -46970213
+      InstanceTarget: {fileID: 11451924}
   Modifications:
     Modificated:
     - Object: {fileID: 148304}
@@ -1914,7 +2121,11 @@ MonoBehaviour:
       Mode: 0
     - Object: {fileID: 411314}
       ObjeckLink: -1733007763
-      PropertyPath: m_RootOrder
+      PropertyPath: m_LocalScale
+      Mode: 0
+    - Object: {fileID: 11469202}
+      ObjeckLink: -1116925317
+      PropertyPath: sound
       Mode: 0
     - Object: {fileID: 475640}
       ObjeckLink: 177609203
@@ -1922,17 +2133,77 @@ MonoBehaviour:
       Mode: 0
     - Object: {fileID: 475640}
       ObjeckLink: 177609203
+      PropertyPath: m_LocalScale
+      Mode: 0
+    - Object: {fileID: 475640}
+      ObjeckLink: 177609203
       PropertyPath: m_RootOrder
+      Mode: 0
+    - Object: {fileID: 22417738}
+      ObjeckLink: 1307422460
+      PropertyPath: m_LocalPosition
+      Mode: 0
+    - Object: {fileID: 22417130}
+      ObjeckLink: -972006036
+      PropertyPath: m_LocalPosition
+      Mode: 0
+    - Object: {fileID: 22417130}
+      ObjeckLink: -972006036
+      PropertyPath: m_RootOrder
+      Mode: 0
+    - Object: {fileID: 22417130}
+      ObjeckLink: -972006036
+      PropertyPath: m_AnchoredPosition
       Mode: 0
     - Object: {fileID: 425434}
       ObjeckLink: 1713644725
       PropertyPath: m_RootOrder
       Mode: 0
+    - Object: {fileID: 419812}
+      ObjeckLink: -1676774268
+      PropertyPath: m_RootOrder
+      Mode: 0
     NonPrefabObjects:
-    - child: {fileID: 0}
+    - child: {fileID: 443470}
       parent: {fileID: 411314}
-    NonPrefabComponents: []
-    RemovedObjects: 
+    - child: {fileID: 425992}
+      parent: {fileID: 411314}
+    - child: {fileID: 456078}
+      parent: {fileID: 411314}
+    - child: {fileID: 470190}
+      parent: {fileID: 456078}
+    - child: {fileID: 437150}
+      parent: {fileID: 456078}
+    - child: {fileID: 460126}
+      parent: {fileID: 456078}
+    - child: {fileID: 441950}
+      parent: {fileID: 456078}
+    - child: {fileID: 408732}
+      parent: {fileID: 456078}
+    - child: {fileID: 490018}
+      parent: {fileID: 456078}
+    - child: {fileID: 427932}
+      parent: {fileID: 456078}
+    - child: {fileID: 437700}
+      parent: {fileID: 456078}
+    - child: {fileID: 460660}
+      parent: {fileID: 456078}
+    NonPrefabComponents:
+    - child: {fileID: 8266336}
+      parent: {fileID: 148304}
+    - child: {fileID: 6573880}
+      parent: {fileID: 148304}
+    - child: {fileID: 5443784}
+      parent: {fileID: 148304}
+    - child: {fileID: 9555798}
+      parent: {fileID: 148304}
+    - child: {fileID: 2311534}
+      parent: {fileID: 188262}
+    - child: {fileID: 2313486}
+      parent: {fileID: 119740}
+    - child: {fileID: 2338384}
+      parent: {fileID: 106402}
+    RemovedObjects: 9afa613e
     TransformParentChanges: []
   ParentPrefabGUID: dfb8a2885bfb82e4abb467b57e7ee23f
   PrefabGUID: 61a79a4ccd7c27d4b8359a40dd9b0800
@@ -2006,6 +2277,26 @@ Prefab:
       propertyPath: shader
       value: 
       objectReference: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 44f0d452151f7964eb8f7bf8532eb656, type: 3}
+    - target: {fileID: 0}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 8266336}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 148304}
