@@ -147,7 +147,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 08e3e96b8e7133b4b8e5eefa875e7191, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.082
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -221,7 +221,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 08e3e96b8e7133b4b8e5eefa875e7191, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.077
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -441,22 +441,16 @@ MonoBehaviour:
       ObjeckLink: 2077773553
       PropertyPath: m_RootOrder
       Mode: 0
+    - Object: {fileID: 8242144}
+      ObjeckLink: 1067973072
+      PropertyPath: m_Volume
+      Mode: 0
+    - Object: {fileID: 8240886}
+      ObjeckLink: -1997922482
+      PropertyPath: m_Volume
+      Mode: 0
     NonPrefabObjects: []
-    NonPrefabComponents:
-    - child: {fileID: 11428850}
-      parent: {fileID: 190416}
-    - child: {fileID: 11404330}
-      parent: {fileID: 115928}
-    - child: {fileID: 8242144}
-      parent: {fileID: 190416}
-    - child: {fileID: 8205848}
-      parent: {fileID: 190416}
-    - child: {fileID: 11478686}
-      parent: {fileID: 190416}
-    - child: {fileID: 8249998}
-      parent: {fileID: 190416}
-    - child: {fileID: 8240886}
-      parent: {fileID: 190416}
+    NonPrefabComponents: []
     RemovedObjects: 
     TransformParentChanges: []
   ParentPrefabGUID: 
