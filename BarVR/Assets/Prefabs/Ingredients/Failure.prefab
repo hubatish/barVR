@@ -29,7 +29,7 @@ GameObject:
   - 114: {fileID: 11401504}
   - 114: {fileID: 11471712}
   - 65: {fileID: 6531052}
-  - 54: {fileID: 5482620}
+  - 54: {fileID: 5439418}
   m_Layer: 0
   m_Name: Failure
   m_TagString: Untagged
@@ -88,7 +88,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!54 &5482620
+--- !u!54 &5439418
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -165,8 +165,8 @@ MonoBehaviour:
       InstanceTarget: {fileID: 11471712}
     - LIIF: -1315617769
       InstanceTarget: {fileID: 6531052}
-    - LIIF: -1546848984
-      InstanceTarget: {fileID: 5482620}
+    - LIIF: 1718390823
+      InstanceTarget: {fileID: 5439418}
     - LIIF: 1776368227
       InstanceTarget: {fileID: 10277466}
     - LIIF: -1265359998
