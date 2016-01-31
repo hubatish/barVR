@@ -17,7 +17,10 @@ public class Selector : MonoBehaviour
         {
             toSelect.Select();
         }
-        toSelect = gameObject.GetComponent<Selectable>();
-        toSelect.Select();
+        else
+        {
+            toSelect = gameObject.GetComponent<Selectable>();
+            toSelect.Select();
+        }
     }
 }

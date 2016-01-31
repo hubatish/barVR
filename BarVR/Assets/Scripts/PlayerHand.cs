@@ -22,6 +22,8 @@ public class PlayerHand : MonoBehaviour
     public void Grab(Ingredient ingredient)
     {
         heldIngredient = ingredient;
+        heldIngredient.GetComponent<Rigidbody>().useGravity = false;
+        heldIngredient.GetComponent<BoxCollider>().enabled = false;
         MoveTo(ingredient, transform);
     }
 
@@ -48,6 +50,8 @@ public class PlayerHand : MonoBehaviour
             return null;
         }
         var ingredient = heldIngredient;
+        heldIngredient.GetComponent<Rigidbody>().useGravity = true;
+        heldIngredient.GetComponent<BoxCollider>().enabled = true;
         heldIngredient = null;
         ingredient.transform.SetParent(null);
         return ingredient;
@@ -62,7 +66,7 @@ public class PlayerHand : MonoBehaviour
         {
             float force = 10f;
             Ingredient i = Release();
-            i.GetComponent<Rigidbody>().AddForce(Vector3.forward * force, ForceMode.Impulse);
+            i.GetComponent<Rigidbody>().AddForce(transform.root.forward * force, ForceMode.Impulse);
         }
         startIngredient = heldIngredient;
     }
