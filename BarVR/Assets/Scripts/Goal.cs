@@ -12,11 +12,14 @@ public class Goal : MonoBehaviour {
 
     public static Goal Instance;
 
+    public Effects effects;
+
     public Action onDrinkFail = delegate () { };
 
     protected void Awake()
     {
         Instance = this;
+        effects = gameObject.GetComponent<Effects>();
     }
 
 	// Use this for initialization
@@ -28,6 +31,7 @@ public class Goal : MonoBehaviour {
 
     public void TryCombo(Ingredient final)
     {
+        effects.PerformEffect();
         if (recipe.combination.product.Equals(final))
         {
             Debug.Log("winnig");

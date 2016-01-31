@@ -49,6 +49,7 @@ GameObject:
   - 114: {fileID: 11443378}
   - 114: {fileID: 11493216}
   - 114: {fileID: 11482480}
+  - 114: {fileID: 11478686}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -224,6 +225,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11478686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce17b3306be69814ea65273595c2ba39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 0.5
 --- !u!114 &11482480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipe: {fileID: 11493216}
+  effects: {fileID: 0}
   healAmount: 20
 --- !u!114 &11493216
 MonoBehaviour:

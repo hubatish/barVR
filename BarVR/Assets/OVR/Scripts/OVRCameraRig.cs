@@ -54,7 +54,7 @@ public class OVRCameraRig : MonoBehaviour
 	public Transform centerEyeAnchor { get; private set; }
 	/// <summary>
 	/// Always coincides with the pose of the right eye.
-	/// </summary>
+	/// </summarsey>
 	public Transform rightEyeAnchor { get; private set; }
 	/// <summary>
 	/// Always coincides with the pose of the left hand.
