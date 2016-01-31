@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6852f0bfb352c7649a58a010c2520746, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -529,7 +529,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &777941661
 Prefab:
   m_ObjectHideFlags: 0
@@ -765,6 +765,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSelect: {fileID: 1009124748}
+  shader: {fileID: 0}
+  doOnce: 1
 --- !u!114 &1009124748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,6 +784,7 @@ MonoBehaviour:
   - {fileID: 1583844253}
   - {fileID: 1257884270}
   - {fileID: 1801277844}
+  boiling: {fileID: 0}
   product: {fileID: 0}
   method: 0
   timer: {fileID: 1523157006}
@@ -1578,6 +1581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heldIngredient: {fileID: 0}
+  force: 8
   startIngredient: {fileID: 0}
 --- !u!1001 &1861576730
 Prefab:
@@ -1687,6 +1691,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSelect: {fileID: 1927025074}
+  shader: {fileID: 0}
+  doOnce: 1
 --- !u!114 &1927025074
 MonoBehaviour:
   m_ObjectHideFlags: 0
