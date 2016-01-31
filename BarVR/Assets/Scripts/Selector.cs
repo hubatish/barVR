@@ -26,8 +26,6 @@ public class Selector : ZBehaviour
         }
     }
 
-    public bool doOnce = true;
-
     protected void Start()
     {
         startShader = mRenderer.material.shader;
