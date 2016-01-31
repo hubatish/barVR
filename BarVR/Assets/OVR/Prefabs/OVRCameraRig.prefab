@@ -43,6 +43,7 @@ GameObject:
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11498176}
+  - 114: {fileID: 11454260}
   m_Layer: 0
   m_Name: OVRCameraRig
   m_TagString: Untagged
@@ -382,6 +383,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11454260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a02d0f612a241b293c0da4f82b712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Properties:
+    Properties: []
+    Groups: []
+    Hidden: 
+  Links:
+    Links:
+    - LIIF: 1005277463
+      InstanceTarget: {fileID: 11454260}
+    - LIIF: 500866156
+      InstanceTarget: {fileID: 100004}
+    - LIIF: 518781511
+      InstanceTarget: {fileID: 159718}
+    - LIIF: 531219324
+      InstanceTarget: {fileID: 110660}
+    - LIIF: 2044167245
+      InstanceTarget: {fileID: 400004}
+    - LIIF: -1638188848
+      InstanceTarget: {fileID: 400002}
+    - LIIF: 913239420
+      InstanceTarget: {fileID: 100002}
+    - LIIF: 1830735298
+      InstanceTarget: {fileID: 468418}
+    - LIIF: 1166496245
+      InstanceTarget: {fileID: 453978}
+    - LIIF: 2117122883
+      InstanceTarget: {fileID: 459718}
+    - LIIF: 416360779
+      InstanceTarget: {fileID: 8100000}
+    - LIIF: -1794749716
+      InstanceTarget: {fileID: 2037080}
+    - LIIF: -107882033
+      InstanceTarget: {fileID: 400006}
+    - LIIF: -1656399162
+      InstanceTarget: {fileID: 400000}
+    - LIIF: 1984261204
+      InstanceTarget: {fileID: 468682}
+    - LIIF: -1054775952
+      InstanceTarget: {fileID: 482130}
+    - LIIF: -1715483631
+      InstanceTarget: {fileID: 487254}
+    - LIIF: 666809470
+      InstanceTarget: {fileID: 187750}
+    - LIIF: -560166629
+      InstanceTarget: {fileID: 412708}
+    - LIIF: 299362111
+      InstanceTarget: {fileID: 109308}
+    - LIIF: -294879231
+      InstanceTarget: {fileID: 113768}
+    - LIIF: -461546679
+      InstanceTarget: {fileID: 21211718}
+    - LIIF: 144975005
+      InstanceTarget: {fileID: 11484226}
+    - LIIF: 999782066
+      InstanceTarget: {fileID: 11488888}
+    - LIIF: -1187986718
+      InstanceTarget: {fileID: 139302}
+    - LIIF: -1064527489
+      InstanceTarget: {fileID: 168682}
+    - LIIF: 1714745590
+      InstanceTarget: {fileID: 100006}
+    - LIIF: -519611990
+      InstanceTarget: {fileID: 100000}
+    - LIIF: -516114907
+      InstanceTarget: {fileID: 11400010}
+    - LIIF: -2067913782
+      InstanceTarget: {fileID: 11400000}
+    - LIIF: -637738003
+      InstanceTarget: {fileID: 11498176}
+    - LIIF: -1760716654
+      InstanceTarget: {fileID: 11470870}
+  Modifications:
+    Modificated: []
+    NonPrefabObjects: []
+    NonPrefabComponents: []
+    RemovedObjects: 
+    TransformParentChanges: []
+  ParentPrefabGUID: 
+  PrefabGUID: 126d619cf4daa52469682f85c1378b4a
 --- !u!114 &11470870
 MonoBehaviour:
   m_ObjectHideFlags: 1
