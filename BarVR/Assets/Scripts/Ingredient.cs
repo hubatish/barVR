@@ -19,8 +19,8 @@ public class Ingredient : Selectable {
             return false;
         }
 
-        string otherName = StripString(c.gameObject.name);
-        string myName = StripString(gameObject.name);
+        string otherName = c.ToString();
+        string myName = ToString();
         return myName == otherName;
     }
 
@@ -29,9 +29,32 @@ public class Ingredient : Selectable {
         PlayerHand.Instance.Grab(this);
     }
 
+    public override string ToString()
+    {
+        string sName = StripString(gameObject.name);
+        string dumbString = "Clone";
+        if (sName.Contains(dumbString))
+        {
+            int cloneStart = sName.IndexOf(dumbString);
+            sName.Remove(cloneStart,dumbString.Length);
+        }
+        return sName;
+    }
+
     protected string StripString(string s)
     {
-        return s.Trim().Trim(new char[] { '(', ')', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' });
+        var toRemove = new char[] { '(', ')', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+        string newS = s.Trim();
+        foreach(var c in toRemove)
+        {
+            //should probably remove multiple ones
+            int loc = newS.IndexOf(c);
+            if (loc >= 0)
+            {
+                newS = newS.Remove(loc);
+            }
+        }
+        return newS;
     }
 
     public override int GetHashCode()

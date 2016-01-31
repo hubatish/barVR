@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &112768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 462902}
+  m_Layer: 0
+  m_Name: PrepSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &117676
 GameObject:
   m_ObjectHideFlags: 1
@@ -36,6 +51,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &136390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 420426}
+  m_Layer: 0
+  m_Name: PrepSpot (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &145034
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,7 +75,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484654}
   m_Layer: 0
-  m_Name: PrepSpot
+  m_Name: PrepSpot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,9 +110,35 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 484654}
+  - {fileID: 462902}
   - {fileID: 22464358}
+  - {fileID: 420426}
+  - {fileID: 484654}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &420426
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.28, y: 1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414772}
+  m_RootOrder: 2
+--- !u!4 &462902
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414772}
   m_RootOrder: 0
 --- !u!4 &484654
 Transform:
@@ -91,11 +147,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalPosition: {x: 0.28, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414772}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!65 &6520538
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -153,10 +209,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bf6ea9bc20bce4e9c8a866a5d43553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curIngredient: {fileID: 0}
+  curIngredients: []
   product: {fileID: 0}
   method: 0
-  ingredientSpot: {fileID: 484654}
+  ingredientSpots:
+  - {fileID: 462902}
+  - {fileID: 420426}
+  - {fileID: 484654}
+  maxIngredients: 3
   timer: {fileID: 11403378}
   prepTime: 2
 --- !u!114 &11421140
@@ -244,9 +304,9 @@ MonoBehaviour:
     - LIIF: 1046608538
       InstanceTarget: {fileID: 6520538}
     - LIIF: 177609203
-      InstanceTarget: {fileID: 484654}
+      InstanceTarget: {fileID: 462902}
     - LIIF: 145611091
-      InstanceTarget: {fileID: 145034}
+      InstanceTarget: {fileID: 112768}
     - LIIF: -2062079674
       InstanceTarget: {fileID: 11403378}
     - LIIF: 1722829833
@@ -267,29 +327,41 @@ MonoBehaviour:
       InstanceTarget: {fileID: 22464358}
     - LIIF: 969863321
       InstanceTarget: {fileID: 134758}
+    - LIIF: -343203028
+      InstanceTarget: {fileID: 145034}
+    - LIIF: 1713644725
+      InstanceTarget: {fileID: 484654}
+    - LIIF: -1606973644
+      InstanceTarget: {fileID: 136390}
+    - LIIF: -1676774268
+      InstanceTarget: {fileID: 420426}
   Modifications:
     Modificated:
     - Object: {fileID: 414772}
       ObjeckLink: -1733007763
       PropertyPath: m_RootOrder
       Mode: 0
-    - Object: {fileID: 11426478}
-      ObjeckLink: 1722829833
-      PropertyPath: m_RaycastTarget
+    - Object: {fileID: 11412958}
+      ObjeckLink: -1116925317
+      PropertyPath: ingredientSpots.Array.size
       Mode: 0
-    - Object: {fileID: 11426478}
-      ObjeckLink: 1722829833
-      PropertyPath: m_Sprite
+    - Object: {fileID: 11412958}
+      ObjeckLink: -1116925317
+      PropertyPath: ingredientSpots.Array.data[0]
       Mode: 0
-    - Object: {fileID: 11426478}
-      ObjeckLink: 1722829833
-      PropertyPath: m_Type
+    - Object: {fileID: 11412958}
+      ObjeckLink: -1116925317
+      PropertyPath: ingredientSpots.Array.data[1]
       Mode: 0
-    - Object: {fileID: 11426478}
-      ObjeckLink: 1722829833
-      PropertyPath: m_FillMethod
+    - Object: {fileID: 11412958}
+      ObjeckLink: -1116925317
+      PropertyPath: ingredientSpots.Array.data[2]
       Mode: 0
-    NonPrefabObjects: []
+    NonPrefabObjects:
+    - child: {fileID: 484654}
+      parent: {fileID: 414772}
+    - child: {fileID: 420426}
+      parent: {fileID: 414772}
     NonPrefabComponents: []
     RemovedObjects: 
     TransformParentChanges: []
