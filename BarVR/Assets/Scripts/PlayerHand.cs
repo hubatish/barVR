@@ -54,17 +54,17 @@ public class PlayerHand : MonoBehaviour
     }
 
     [SerializeField]
-    protected bool wasHolding = false;
+    protected Ingredient startIngredient;
 
     protected void MouseDown()
     {
-        if (heldIngredient != null && wasHolding)
+        if (heldIngredient != null && startIngredient==heldIngredient)
         {
             float force = 10f;
             Ingredient i = Release();
             i.GetComponent<Rigidbody>().AddForce(Vector3.forward * force, ForceMode.Impulse);
         }
-        wasHolding = (heldIngredient != null);
+        startIngredient = heldIngredient;
     }
 
     protected void Update()

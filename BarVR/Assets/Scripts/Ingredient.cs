@@ -4,6 +4,8 @@ using System;
 
 public class Ingredient : Selectable {
 
+    public Combination formingCombination = null;
+
     public override bool Equals(object obj)
     {
         // If parameter is null return false.
@@ -19,9 +21,21 @@ public class Ingredient : Selectable {
             return false;
         }
 
-        string otherName = c.ToString();
-        string myName = ToString();
-        return myName == otherName;
+        if(formingCombination == null)
+        {
+            string otherName = c.ToString();
+            string myName = ToString();
+
+            return myName == otherName;
+        }
+        else if (c.formingCombination == null)
+        {
+            return false;
+        }
+        else
+        {
+            return c.formingCombination.Equals(formingCombination);
+        }
     }
 
     public override void Select()
