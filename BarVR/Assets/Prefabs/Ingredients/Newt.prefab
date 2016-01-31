@@ -39,23 +39,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &191314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 22455464}
-  - 23: {fileID: 2343026}
-  - 102: {fileID: 10271842}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &400688
 Transform:
   m_ObjectHideFlags: 1
@@ -67,7 +50,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 499268}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &499268
 Transform:
   m_ObjectHideFlags: 1
@@ -75,39 +58,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.57899857, z: 0}
+  m_LocalPosition: {x: -9.69, y: 0.57899857, z: 1.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 22455464}
   - {fileID: 400688}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2343026
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191314}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &2358518
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -118,7 +74,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4d24bc3c93ae8744c9fb8eb9bbcf90a5, type: 2}
+  - {fileID: 2100000, guid: d296c27ff998a3147b49355fe4ff2eb3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -185,27 +141,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!102 &10271842
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191314}
-  m_Text: Newt
-  m_OffsetZ: 0
-  m_CharacterSize: 1
-  m_LineSpacing: 1
-  m_Anchor: 4
-  m_Alignment: 1
-  m_TabSize: 4
-  m_FontSize: 40
-  m_FontStyle: 3
-  m_RichText: 1
-  m_Font: {fileID: 0}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278976296
 --- !u!114 &11402164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,13 +182,13 @@ MonoBehaviour:
     - LIIF: -317714539
       InstanceTarget: {fileID: 5483006}
     - LIIF: 1380690478
-      InstanceTarget: {fileID: 191314}
+      InstanceTarget: {fileID: 0}
     - LIIF: -1561858794
-      InstanceTarget: {fileID: 22455464}
+      InstanceTarget: {fileID: 0}
     - LIIF: 1688803300
-      InstanceTarget: {fileID: 2343026}
+      InstanceTarget: {fileID: 0}
     - LIIF: 476531849
-      InstanceTarget: {fileID: 10271842}
+      InstanceTarget: {fileID: 0}
     - LIIF: 1816832772
       InstanceTarget: {fileID: 499268}
     - LIIF: -368063230
@@ -277,7 +212,7 @@ MonoBehaviour:
       PropertyPath: m_Name
       Mode: 0
     NonPrefabObjects:
-    - child: {fileID: 22455464}
+    - child: {fileID: 0}
       parent: {fileID: 499268}
     - child: {fileID: 400688}
       parent: {fileID: 499268}
@@ -350,23 +285,6 @@ MonoBehaviour:
     TransformParentChanges: []
   ParentPrefabGUID: 
   PrefabGUID: 9ad51c8e738dcf94696749c28d0b3c9f
---- !u!224 &22455464
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_Children: []
-  m_Father: {fileID: 499268}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.41}
-  m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
