@@ -57,7 +57,7 @@ public class Recipe : MonoBehaviour {
                 var bases = MasterIngredientList.Instance.baseIngredients;
                 bases = RandomArrayTool.Randomize<Ingredient>(bases.ToArray()).ToList();
                 var ingredients = bases.Take(numI).ToList();
-                Combination combo = new Combination(ingredients, (PrepMethod) UnityEngine.Random.Range(0, 3));
+                Combination combo = new Combination(ingredients, (PrepMethod) UnityEngine.Random.Range(0, 2));
                 return combo;
     }
 }

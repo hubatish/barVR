@@ -62,7 +62,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 0.972, z: -0.04}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415294}
@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.15, y: -3.83, z: 0}
+  m_LocalPosition: {x: -0.97, y: -4.79, z: -1.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 491612}
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 1.6, z: 0}
+  m_LocalPosition: {x: 0.04, y: 1.33, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 415294}
@@ -163,7 +163,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.35, z: 0}
 --- !u!95 &9567618
 Animator:
   serializedVersion: 3
@@ -195,7 +195,7 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 30
+  m_FontSize: 50
   m_FontStyle: 3
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -233,18 +233,24 @@ MonoBehaviour:
       InstanceTarget: {fileID: 491612}
     - LIIF: 145611091
       InstanceTarget: {fileID: 109228}
-    - LIIF: -1018826089
-      InstanceTarget: {fileID: 0}
-    - LIIF: -1702856974
-      InstanceTarget: {fileID: 0}
-    - LIIF: -418567668
-      InstanceTarget: {fileID: 0}
-    - LIIF: 736798030
-      InstanceTarget: {fileID: 0}
-    - LIIF: 817788813
-      InstanceTarget: {fileID: 0}
     - LIIF: -356129409
       InstanceTarget: {fileID: 11425468}
+    - LIIF: 730222769
+      InstanceTarget: {fileID: 11413364}
+    - LIIF: -1451314130
+      InstanceTarget: {fileID: 9567618}
+    - LIIF: 1895215947
+      InstanceTarget: {fileID: 2316650}
+    - LIIF: 1807940403
+      InstanceTarget: {fileID: 3304848}
+    - LIIF: 745521937
+      InstanceTarget: {fileID: 2318512}
+    - LIIF: -841056408
+      InstanceTarget: {fileID: 10259566}
+    - LIIF: -464772297
+      InstanceTarget: {fileID: 411470}
+    - LIIF: -2049775407
+      InstanceTarget: {fileID: 157758}
   Modifications:
     Modificated:
     - Object: {fileID: 149502}
@@ -263,12 +269,24 @@ MonoBehaviour:
       ObjeckLink: 1920850964
       PropertyPath: toSelect
       Mode: 0
+    - Object: {fileID: 491612}
+      ObjeckLink: 177609203
+      PropertyPath: m_LocalPosition
+      Mode: 0
+    - Object: {fileID: 491612}
+      ObjeckLink: 177609203
+      PropertyPath: m_LocalScale
+      Mode: 0
     NonPrefabObjects:
-    - child: {fileID: 0}
+    - child: {fileID: 411470}
       parent: {fileID: 415294}
     NonPrefabComponents:
+    - child: {fileID: 2318512}
+      parent: {fileID: 109228}
     - child: {fileID: 11425468}
       parent: {fileID: 149502}
+    - child: {fileID: 10259566}
+      parent: {fileID: 109228}
     RemovedObjects: 7b126dbd46291785094cb0668bd524e4a69eb764a9bbe34ab7b1fa8090b0d0e499f0ce392c238beb348737a0
     TransformParentChanges: []
   ParentPrefabGUID: dfb8a2885bfb82e4abb467b57e7ee23f
@@ -303,7 +321,15 @@ MonoBehaviour:
     - LIIF: -233967762
       InstanceTarget: {fileID: 157758}
   Modifications:
-    Modificated: []
+    Modificated:
+    - Object: {fileID: 411470}
+      ObjeckLink: -765337030
+      PropertyPath: m_LocalPosition
+      Mode: 0
+    - Object: {fileID: 411470}
+      ObjeckLink: -765337030
+      PropertyPath: m_RootOrder
+      Mode: 0
     NonPrefabObjects: []
     NonPrefabComponents: []
     RemovedObjects: 
@@ -337,7 +363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11425468}
   shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
-  doOnce: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

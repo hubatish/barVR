@@ -24,7 +24,7 @@ public class Health : MonoBehaviour {
 
     protected float curHealth;
 
-    public float deathSpeed = 1f;
+    protected float deathSpeed = 3f;
 
     protected void FixedUpdate()
     {
