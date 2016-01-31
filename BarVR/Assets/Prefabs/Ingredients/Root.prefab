@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11498920}
   - 114: {fileID: 11434700}
   - 65: {fileID: 6502168}
+  - 54: {fileID: 5482852}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -87,6 +88,21 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!54 &5482852
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158008}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6502168
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -151,6 +167,8 @@ MonoBehaviour:
       InstanceTarget: {fileID: 11434700}
     - LIIF: -1315617769
       InstanceTarget: {fileID: 6502168}
+    - LIIF: -1546848984
+      InstanceTarget: {fileID: 5482852}
     - LIIF: 204749394
       InstanceTarget: {fileID: 10232674}
     - LIIF: 927697783
@@ -164,10 +182,6 @@ MonoBehaviour:
     - Object: {fileID: 158008}
       ObjeckLink: 1898382997
       PropertyPath: m_Name
-      Mode: 0
-    - Object: {fileID: 465764}
-      ObjeckLink: -1364344834
-      PropertyPath: m_LocalPosition
       Mode: 0
     - Object: {fileID: 465764}
       ObjeckLink: -1364344834

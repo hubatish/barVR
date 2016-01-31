@@ -52,4 +52,33 @@ public class PlayerHand : MonoBehaviour
         ingredient.transform.SetParent(null);
         return ingredient;
     }
+
+    [SerializeField]
+    protected bool wasHolding = false;
+
+    protected void MouseDown()
+    {
+        if (heldIngredient != null && wasHolding)
+        {
+            float force = 10f;
+            Ingredient i = Release();
+            i.GetComponent<Rigidbody>().AddForce(Vector3.forward * force, ForceMode.Impulse);
+        }
+        wasHolding = (heldIngredient != null);
+    }
+
+    protected void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            MouseDown();
+        } else if (Input.GetMouseButtonUp(0))
+        {
+            MouseUp();
+        }
+    }
+
+    protected void MouseUp()
+    {
+    }
 }

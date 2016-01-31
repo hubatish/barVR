@@ -18,16 +18,18 @@ public class Goal : MonoBehaviour {
         recipe.SetCombination();
 	}
 
+    public float healAmount = 20f;
+
     public void TryCombo(Ingredient final)
     {
         if (recipe.combination.product.Equals(final))
         {
-            Debug.Log("WINning!");
             recipe.SetCombination();
+            Health.Instance.LoseHealth(-healAmount);
         }
         else
         {
-            Debug.Log("utter failure!");
+            Health.Instance.LoseHealth(healAmount/2f);
         }
     }
 

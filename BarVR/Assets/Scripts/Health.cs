@@ -3,6 +3,10 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Health drains over time
+///     Lose at 0
+/// </summary>
 public class Health : MonoBehaviour {
 
     public static Health Instance;
