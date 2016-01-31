@@ -46,7 +46,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.32, y: 0, z: -4.161}
+  m_LocalPosition: {x: -2.68, y: 3.87, z: -10.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 480084}
@@ -58,8 +58,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138990}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.113, z: 0.05}
+  m_LocalRotation: {x: -0.3757946, y: 0, z: 0, w: 0.92670304}
+  m_LocalPosition: {x: 0.029999971, y: -0.112999916, z: 0.05000019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 437746}
@@ -258,7 +258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11490704}
   shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
-  doOnce: 1
 --- !u!114 &11490704
 MonoBehaviour:
   m_ObjectHideFlags: 1

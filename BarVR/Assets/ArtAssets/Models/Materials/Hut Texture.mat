@@ -161,6 +161,14 @@ Material:
         second: 0.02
       data:
         first:
+          name: _EdgeLength
+        second: 10
+      data:
+        first:
+          name: _BumpAmt
+        second: 10
+      data:
+        first:
           name: _ZWrite
         second: 1
       data:
@@ -191,14 +199,6 @@ Material:
         first:
           name: _Metallic
         second: 0
-      data:
-        first:
-          name: _EdgeLength
-        second: 10
-      data:
-        first:
-          name: _BumpAmt
-        second: 10
       data:
         first:
           name: _ColorRampOffset

@@ -22,11 +22,13 @@ public class Effects : MonoBehaviour
         {
             rig.LookSensitivity.x -= sensitivity;
         };
+
         effects.Add(slowDown);
         Action speedUp = delegate ()
         {
             rig.LookSensitivity.y += sensitivity;
         };
+
         effects.Add(speedUp);
         Action heartBeat = delegate ()
         {
