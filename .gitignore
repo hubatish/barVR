@@ -45,3 +45,5 @@ Thumbs.db
 traceBlocks/purchasedItems
 
 BarVR/Builds/
+BarVR/Assets/Plugins/x86/OVRGamepad.dll.meta
+BarVR/Assets/Plugins/x86_64/OVRGamepad.dll.meta
