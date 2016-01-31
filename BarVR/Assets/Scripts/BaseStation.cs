@@ -17,7 +17,16 @@ public class BaseStation : Selectable
             PlayerHand.Instance.DropIngredient();
             return;
         }
-        PlayerHand.Instance.MoveTo(ingredient, ingredientSpots[curIngredients.Count]);
+        int numI = curIngredients.Count;
+        ingredient.GetComponent<Collider>().enabled = false;
+
+        PlayerHand.Instance.MoveTo(ingredient, ingredientSpots[numI],delegate()
+        {
+            //ingredient.transform.SetParent(ingredientSpots[numI]);
+            ingredient.transform.position = ingredientSpots[numI].position;
+            ingredient.GetComponent<Collider>().enabled = true;
+            //ingredient.GetComponent<Rigidbody>().isKinematic = true;
+        });
         curIngredients.Add(ingredient);
         ingredient.onSelect += delegate ()
         {
@@ -29,6 +38,7 @@ public class BaseStation : Selectable
     {
         if (curIngredients.Contains(ingredient))
         {
+            //ingredient.GetComponent<Rigidbody>().isKinematic = false;
             curIngredients.Remove(ingredient);
             ingredient.onSelect = delegate () { };
         }
