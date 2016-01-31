@@ -43,11 +43,16 @@ public class PreparationStation : BaseStation
 
     public void FinishPrep()
     {
-        Debug.Log("Done prepping!");
         // anim.SetTrigger(boilhash);
 
         product = MasterIngredientList.Instance.CombineIngredients(curIngredients, method);
         product.transform.position = ingredientSpots[0].position;
+
+        Debug.Log("Done prepping!"+product.name);
+
+        Vector3 towardsZero = (Camera.main.transform.position - transform.position).normalized;
+        towardsZero.y += 0.2f;
+        product.GetComponent<Rigidbody>().AddForce(towardsZero * 0.3f);
 
         ClearIngredients();
         if (animEffect != null)

@@ -104,8 +104,8 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157420}
   serializedVersion: 2
-  m_Mass: 9
-  m_Drag: 0.4
+  m_Mass: 1
+  m_Drag: 0
   m_AngularDrag: 0.1
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -142,7 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSelect: {fileID: 11456444}
   shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
-  doOnce: 1
 --- !u!114 &11456444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,13 +208,19 @@ MonoBehaviour:
       Mode: 0
     - Object: {fileID: 460116}
       ObjeckLink: -1364344834
-      PropertyPath: m_RootOrder
+      PropertyPath: m_LocalPosition
+      Mode: 0
+    - Object: {fileID: 5453260}
+      ObjeckLink: 1718390823
+      PropertyPath: m_AngularDrag
       Mode: 0
     NonPrefabObjects:
     - child: {fileID: 407424}
       parent: {fileID: 460116}
-    NonPrefabComponents: []
-    RemovedObjects: 
+    NonPrefabComponents:
+    - child: {fileID: 13517066}
+      parent: {fileID: 157420}
+    RemovedObjects: 174495b1
     TransformParentChanges: []
   ParentPrefabGUID: 2fbf873d7179d834aa2adda39e21aae8
   PrefabGUID: d59f5bf8e09601048a95d219929d2d90
@@ -250,6 +255,10 @@ MonoBehaviour:
       InstanceTarget: {fileID: 135902}
   Modifications:
     Modificated:
+    - Object: {fileID: 2331754}
+      ObjeckLink: -1863392894
+      PropertyPath: m_Materials.Array.data[0]
+      Mode: 0
     - Object: {fileID: 407424}
       ObjeckLink: -765337030
       PropertyPath: m_LocalPosition
@@ -283,6 +292,14 @@ Prefab:
       propertyPath: shader
       value: 
       objectReference: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 157420}

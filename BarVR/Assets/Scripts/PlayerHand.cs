@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,9 +34,14 @@ public class PlayerHand : MonoBehaviour
 
     public void MoveTo(Ingredient ingredient, Transform t)
     {
+        MoveTo(ingredient, t, delegate () { });
+    }
+
+    public void MoveTo(Ingredient ingredient, Transform t, TweenCallback callback)
+    {
         //Should tween
-        ingredient.transform.position = t.position;
-        ingredient.transform.SetParent(t);
+        //ingredient.transform.position = t.position;
+        ingredient.GetComponent<Rigidbody>().DOMove(t.position, 1f).OnComplete(callback);
         ingredient.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
