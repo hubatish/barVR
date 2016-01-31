@@ -132,6 +132,8 @@ public class OVRCameraRig : MonoBehaviour
 
 #endregion
 
+	public Vector3 LookSensitivity = Vector3.zero;
+
 	private void UpdateAnchors()
 	{
 		bool monoscopic = OVRManager.instance.monoscopic;
@@ -140,8 +142,17 @@ public class OVRCameraRig : MonoBehaviour
 
 		trackerAnchor.localRotation = tracker.orientation;
 		centerEyeAnchor.localRotation = VR.InputTracking.GetLocalRotation(VR.VRNode.CenterEye);
-        leftEyeAnchor.localRotation = monoscopic ? centerEyeAnchor.localRotation : VR.InputTracking.GetLocalRotation(VR.VRNode.LeftEye);
-		rightEyeAnchor.localRotation = monoscopic ? centerEyeAnchor.localRotation : VR.InputTracking.GetLocalRotation(VR.VRNode.RightEye);
+		// Comment these out if I broke things
+		Quaternion _centerEyeRotation = Quaternion.Euler(VR.InputTracking.GetLocalRotation(VR.VRNode.CenterEye).eulerAngles + LookSensitivity);
+		Quaternion _leftEyeRotation = Quaternion.Euler(VR.InputTracking.GetLocalRotation(VR.VRNode.LeftEye).eulerAngles + LookSensitivity);
+		Quaternion _rightEyeRotation = Quaternion.Euler(VR.InputTracking.GetLocalRotation(VR.VRNode.RightEye).eulerAngles + LookSensitivity);
+		// Un comment these if I broke things
+        // leftEyeAnchor.localRotation = monoscopic ? centerEyeAnchor.localRotation : VR.InputTracking.GetLocalRotation(VR.VRNode.LeftEye);
+		// rightEyeAnchor.localRotation = monoscopic ? centerEyeAnchor.localRotation : VR.InputTracking.GetLocalRotation(VR.VRNode.RightEye);
+		// Comment these out if I broke Things
+		leftEyeAnchor.localRotation = monoscopic ? _centerEyeRotation: _leftEyeRotation;
+		rightEyeAnchor.localRotation = monoscopic ? _centerEyeRotation: _rightEyeRotation;
+		// end
 		leftHandAnchor.localRotation = OVRInput.GetLocalHandRotation(OVRInput.Hand.Left);
 		rightHandAnchor.localRotation = OVRInput.GetLocalHandRotation(OVRInput.Hand.Right);
 
