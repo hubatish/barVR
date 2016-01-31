@@ -48,7 +48,7 @@ public class Effects : MonoBehaviour
 
     IEnumerator alterSound() {
         yield return new WaitForSeconds(2);
-        sounds[1].volume = 1;
+        sounds[1].volume = 0.1f;
         sounds[0].volume = 0;
     }
 }
