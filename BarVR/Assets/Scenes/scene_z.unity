@@ -636,8 +636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5474bfe625113dd43a2b0339af42137e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient: {fileID: 22404342, guid: aaa5f50f6b7dbd14d9687e431aa88d95, type: 2}
-  numToSpawn: 7
+  ingredient: {fileID: 499268, guid: aaa5f50f6b7dbd14d9687e431aa88d95, type: 2}
+  numToSpawn: 1
   spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &941133913
 Transform:
