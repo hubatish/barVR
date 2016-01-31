@@ -27,7 +27,7 @@ public class PlayerHand : MonoBehaviour
         }
         heldIngredient = ingredient;
         heldIngredient.GetComponent<Rigidbody>().useGravity = false;
-        heldIngredient.GetComponent<BoxCollider>().enabled = false;
+        heldIngredient.GetComponent<Collider>().enabled = false;
         MoveTo(ingredient, transform);
     }
 
@@ -56,7 +56,7 @@ public class PlayerHand : MonoBehaviour
         }
         var ingredient = heldIngredient;
         heldIngredient.GetComponent<Rigidbody>().useGravity = true;
-        heldIngredient.GetComponent<BoxCollider>().enabled = true;
+        heldIngredient.GetComponent<Collider>().enabled = true;
         heldIngredient = null;
         ingredient.transform.SetParent(null);
         return ingredient;

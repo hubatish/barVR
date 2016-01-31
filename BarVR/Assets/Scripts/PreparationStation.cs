@@ -9,7 +9,7 @@ public class PreparationStation : BaseStation
 {
     //Animator anim;
     // int boilhash = Animator.StringToHash("shake");
-    public GameObject boiling;
+    public GameObject animEffect;
     public Ingredient product;
 
     public PrepMethod method;
@@ -18,15 +18,24 @@ public class PreparationStation : BaseStation
     protected void Start()
     {
         // anim = GetComponent<Animator>();
-        boiling = GameObject.Find("HolyFireStrike");
-        boiling.SetActive(false);
+        if (animEffect == null)
+        {
+            animEffect = GameObject.Find("HolyFireStrike");
+        }
+        if (animEffect != null)
+        {
+            animEffect.SetActive(false);
+        }
         timer.done = FinishPrep;
     }
 
     public override void UseIngredients()
     {
         //They clicked while have ingredients in Station
-        boiling.SetActive(true);
+        if (animEffect != null)
+        {
+            animEffect.SetActive(true);
+        }
         timer.StartTimer();
     }
 
@@ -41,6 +50,9 @@ public class PreparationStation : BaseStation
         product.transform.position = ingredientSpots[0].position;
 
         ClearIngredients();
-        boiling.SetActive(false);
+        if (animEffect != null)
+        {
+            animEffect.SetActive(false);
+        }
     }
 }

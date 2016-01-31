@@ -246,6 +246,10 @@ Prefab:
       propertyPath: m_Color.rgba
       value: 4281085149
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shader
+      value: 
+      objectReference: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 164770}
