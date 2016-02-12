@@ -24,6 +24,7 @@ public class PlayerHand : MonoBehaviour
     {
         if (heldIngredient != null)
         {
+            //derp, git change
             ReleaseWithForce();
         }
         heldIngredient = ingredient;

@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class BaseStation : Selectable
 {
-    public AudioSource sound;
+    public AudioSource sound1;
 
     public List<Ingredient> curIngredients;
     public List<Transform> ingredientSpots = new List<Transform>();
@@ -62,9 +62,11 @@ public class BaseStation : Selectable
     public virtual void UseIngredients()
     {
         //They clicked while have ingredients in Station
-        if (sound != null)
+        if (sound1
+    != null)
         {
-            sound.Play();
+            sound1
+       .Play();
         }
     }
 
